@@ -142,12 +142,13 @@ function addParticles() {
 	scene.add(particleMesh)
 	particles = particleMesh
 }
-
+//@ts-ignore
 function getStringFromSVG(svgElement: SVGElement) {
 	const serializer = new XMLSerializer()
 	const svgString = serializer.serializeToString(svgElement)
 	return svgString
 }
+//@ts-ignore
 
 function downloadSVG(svgString: string, filename: string) {
 	const svgBlob = new Blob([svgString], { type: 'image/svg+xml;charset=utf-8' })
@@ -160,6 +161,7 @@ function downloadSVG(svgString: string, filename: string) {
 	downloadLink.click()
 	document.body.removeChild(downloadLink)
 }
+//@ts-ignore
 
 function mountSVGFromString(svgString: string) {
 	const container = document.createElement('div')
@@ -362,6 +364,7 @@ window.onload = function () {
 
 	loadingScreen.hide()
 }
+//@ts-ignore
 
 function degreesToRadians(degrees: number) {
 	return degrees * (Math.PI / 180)

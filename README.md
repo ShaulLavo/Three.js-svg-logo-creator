@@ -14,7 +14,7 @@ npm install
 
 ## Usage
 
-Run `npm run dev`. Open [http://localhost:3000](http://localhost:3000) to use. Edits are auto-rendered to SVG.
+Run `npm run dev`. Open [http://localhost:3000](http://localhost:3000) to use.
 
 ## License
 
