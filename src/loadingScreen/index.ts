@@ -2,7 +2,7 @@ const app = document.getElementById('app')
 const container = document.createElement('div')
 container.id = 'loading-screen'
 container.innerHTML = '<div class="spinner"></div>'
-app?.appendChild(container) // The '?' is for optional chaining in case 'app' is null
+app!.appendChild(container)
 
 const show = () => {
 	container.style.display = 'flex'

@@ -1,7 +1,8 @@
 import * as THREE from 'three'
 
 abstract class BaseShape extends THREE.LineSegments {
-	private _speed = 1
+	private _speedX = 1
+	private _speedY = 1
 
 	protected constructor(
 		geometry: THREE.BufferGeometry,
@@ -19,12 +20,15 @@ abstract class BaseShape extends THREE.LineSegments {
 		;(this.material as THREE.LineBasicMaterial).color.set(color)
 	}
 
-	public setSpeed(speed: number) {
-		this._speed = speed
+	public setSpeedX(speed: number) {
+		this._speedX = speed
+	}
+	public setSpeedY(speed: number) {
+		this._speedY = speed
 	}
 
 	public get speed() {
-		return this._speed
+		return { x: this._speedX, y: this._speedY }
 	}
 }
 
@@ -70,7 +74,6 @@ class Torus extends BaseShape {
 		this.position.set(...position)
 	}
 }
-
 function setupShape(
 	type: 'cube',
 	size: number,
@@ -115,4 +118,6 @@ function setupShape(type: string, ...params: any[]): BaseShape {
 	return shape
 }
 
-export { BaseShape, Cube, Sphere, Torus, setupShape }
+type ShapeType = 'cube' | 'sphere' | 'torus'
+export type { ShapeType, BaseShape }
+export { Cube, Sphere, Torus, setupShape }

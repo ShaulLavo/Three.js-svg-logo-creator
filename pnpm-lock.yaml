@@ -8,9 +8,15 @@ dependencies:
   dat.gui:
     specifier: ^0.7.9
     version: 0.7.9
+  rangeslider-js:
+    specifier: ^3.2.5
+    version: 3.2.5
   three:
     specifier: ^0.158.0
     version: 0.158.0
+  toolcool-range-slider:
+    specifier: ^4.0.28
+    version: 4.0.28
 
 devDependencies:
   '@types/dat.gui':
@@ -343,6 +349,10 @@ packages:
     resolution: {integrity: sha512-n3u5sqXQJhf1CS68mw3Wf16FQ4cRPNBBwdYLFzq3UddiADOim1Pn3Y6PBdDilz1vOJF3ybLxJ8ZEDlLIzrOQZg==}
     dev: true
 
+  /custom-event@1.0.1:
+    resolution: {integrity: sha512-GAj5FOq0Hd+RsCGVJxZuKaIDXDf3h6GQoNEjFgbLLI/trgtavwUbSnZ5pVfg27DVCaWjIohryS0JFwIJyT2cMg==}
+    dev: false
+
   /dat.gui@0.7.9:
     resolution: {integrity: sha512-sCNc1OHobc+Erc1HqiswYgHdVNpSJUlk/Hz8vzOCsER7rl+oF/4+v8GXFUyCgtXpoCX6+bnmg07DedLvBLwYKQ==}
     dev: false
@@ -376,6 +386,10 @@ packages:
       '@esbuild/win32-ia32': 0.19.8
       '@esbuild/win32-x64': 0.19.8
     dev: true
+
+  /ev-pos@1.0.1:
+    resolution: {integrity: sha512-XgzFXHBcgOQ92hDQLT2tjB+jC6tcfiUOn0FdfcwFkq1/5LeYY3ql163ADVpj8e8LKAU5oUo9ro1gq1cXnO8eOA==}
+    dev: false
 
   /fflate@0.6.10:
     resolution: {integrity: sha512-IQrh3lEPM93wVCEczc9SaAOvkmcoQn/G8Bo1e8ZPlY3X3bnAxWaBdvTdvM1hP62iZp0BXWDy4vTAy4fF0+Dlpg==}
@@ -412,6 +426,14 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
+  /rangeslider-js@3.2.5:
+    resolution: {integrity: sha512-aGNQPNpM4Qd8w3UpAZGY2ax8naLiiSPDAT+jKi/cz9Gigg9ON1ODc9xpWS8Kjsf1eIBHAEXcYcQtRU7NqabM/Q==}
+    engines: {node: '>=10', npm: '>=6'}
+    dependencies:
+      custom-event: 1.0.1
+      ev-pos: 1.0.1
+    dev: false
+
   /rollup@4.6.0:
     resolution: {integrity: sha512-R8i5Her4oO1LiMQ3jKf7MUglYV/mhQ5g5OKeld5CnkmPdIGo79FDDQYqPhq/PCVuTQVuxsWgIbDy9F+zdHn80w==}
     engines: {node: '>=18.0.0', npm: '>=8.0.0'}
@@ -439,6 +461,10 @@ packages:
 
   /three@0.158.0:
     resolution: {integrity: sha512-TALj4EOpdDPF1henk2Q+s17K61uEAAWQ7TJB68nr7FKxqwyDr3msOt5IWdbGm4TaWKjrtWS8DJJWe9JnvsWOhQ==}
+    dev: false
+
+  /toolcool-range-slider@4.0.28:
+    resolution: {integrity: sha512-DDZAEJ9hItgSbGWY6DkjvMoUBLZG9J3X6qvBzAruvGzcPwrZKRt3EB2ixPqFmrpEy98SyyM+WZbKL0+TR4fOkg==}
     dev: false
 
   /typescript@5.3.2:
