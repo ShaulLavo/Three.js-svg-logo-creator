@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<link
+			rel="preload"
+			href="./src/loadingScreen/style.css"
+			as="style"
+			onload="this.onload=null;this.rel='stylesheet'" />
+		<noscript
+			><link
+				rel="preload"
+				href="./src/loadingScreen/style.css"
+				as="style"
+				onload="this.onload=null;this.rel='stylesheet'"
+		/></noscript>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vite + TS</title>
+	</head>
+	<body>
+		<div id="app">
+			<div class="settings-menu">
+				<h3>Settings</h3>
+				<div>
+					<label for="shape">Shape:</label>
+					<select id="shape">
+						<option value="sphere">Sphere</option>
+						<option value="cube">Cube</option>
+						<option value="torus">Torus</option>
+					</select>
+				</div>
+
+				<div>
+					<input type="checkbox" id="shouldAnimateRotation" checked />
+					<label for="shouldAnimateRotation">Animate Rotation</label>
+				</div>
+				<div>
+					<input type="checkbox" id="shouldAnimateColor" checked />
+					<label for="shouldAnimateColor">Animate Color</label>
+				</div>
+				<div id="colorFields">
+					<div id="animateColorFields">
+						<div>
+							<label for="initialColor">Initial Color:</label>
+							<input type="color" id="initialColor" value="#ffdddd" />
+						</div>
+						<div>
+							<label for="targetColor">Target Color:</label>
+							<input type="color" id="targetColor" value="#7f7f7f" />
+						</div>
+						<div>
+							<label for="colorChangeSpeed">Color Change Speed:</label>
+							<input type="range" id="colorChangeSpeed" min="0" max="1" step="0.01" value="0.1" />
+							<span id="colorChangeSpeedValue">0.1</span>
+						</div>
+					</div>
+					<div id="regularColorField" style="display: none">
+						<label for="regularColor">Regular Color:</label>
+						<input type="color" id="regularColor" value="#ffffff" />
+					</div>
+				</div>
+
+				<div>
+					<input type="checkbox" id="shouldAnimateScale" checked />
+					<label for="shouldAnimateScale">Animate Scale</label>
+				</div>
+				<div>
+					<input type="checkbox" id="shouldAddParticles" />
+					<label for="shouldAddParticles">Add Particles</label>
+				</div>
+			</div>
+		</div>
+
+		<script type="module" src="/src/main.ts"></script>
+	</body>
+</html>
